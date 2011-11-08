@@ -57,6 +57,7 @@ module Sunspot
       
           # If we are given a query string, tokenize it and strictly replace
           # the terms that aren't present in the index
+          d terms
           if terms.present?
             terms.each do |term|
               if (spellcheck_suggestions[term]||{})['origFreq'] == 0
